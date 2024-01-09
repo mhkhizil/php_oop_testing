@@ -15,5 +15,8 @@ require_once "./autoload.php";
 // print_r($student1);
 $user=new Db("testing");
 
-$user->create(["sname"=>"Thurein Zaw","money"=>5000]);
-var_dump($user->read());
+// $user->create(["sname"=>"Thurein Zaw","money"=>5000]);
+print_r($user->index());
+var_dump($user->show(1));
+$txt=new FileWiter("testingWriter.txt");
+$txt->writing("hello testing");
