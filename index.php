@@ -16,7 +16,11 @@ require_once "./autoload.php";
 $user=new Db("testing");
 
 // $user->create(["sname"=>"Thurein Zaw","money"=>5000]);
-print_r($user->index());
-var_dump($user->show(1));
-$txt=new FileWiter("testingWriter.txt");
-$txt->writing("hello testing");
+// print_r($user->index());
+// var_dump($user->show(1));
+// $txt=new FileWiter("testingWriter.txt");
+// $txt->writing("hello testing");
+// echo Three::$a;
+// echo Three ::c();
+$methodChain=new MethodChain;
+print_r($methodChain->a()->b()->c()->b()->a());
