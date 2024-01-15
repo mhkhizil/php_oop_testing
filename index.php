@@ -13,7 +13,7 @@ require_once "./autoload.php";
 // $student1=new Students("Thurein zaw","male","2003");
 // echo $student1->introduction();
 // print_r($student1);
-$user=new Db("testing");
+// $user=new Db("testing");
 
 // $user->create(["sname"=>"Thurein Zaw","money"=>5000]);
 // print_r($user->index());
@@ -22,5 +22,7 @@ $user=new Db("testing");
 // $txt->writing("hello testing");
 // echo Three::$a;
 // echo Three ::c();
-$methodChain=new MethodChain;
-print_r($methodChain->a()->b()->c()->b()->a());
+// $methodChain=new MethodChain;
+// print_r($methodChain->a()->b()->c()->b()->a());
+$testUser= new QuerBuilder5("testing");
+print_r($testUser->where("gender","=","female")->where("age","=","150")->orWhere("age","=","15")->orWhere("age","=","15")->orderBy("id")->orderBy("name")->sql());
